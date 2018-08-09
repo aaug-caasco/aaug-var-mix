@@ -1,0 +1,75 @@
+// BREAKPOINTS -------------------------
+$bp320: 320px;
+$bp352: 352px;
+$bp384: 384px;
+$bp414: 414px;
+$bp480: 480px;
+$bp540: 540px;
+$bp600: 600px;
+$bp640: 640px;
+$bp701: 701px;
+$bp768: 768px;
+$bp800: 800px;
+$bp854: 854px;
+$bp960: 960px;
+$bp1024: 1024px;
+$bp1280: 1280px;
+
+
+// COLOURS -------------------------
+$cta-green: #65b32b;
+
+
+// MIXINS -------------------------
+@mixin border-bottom($color, $bottom-padding) {
+  border-bottom: 1px solid $color;
+  padding-bottom: $bottom-padding;
+}
+
+@mixin border-none() { border: 0; }
+
+@mixin border-radius($border-radius) {
+
+  -webkit-border-radius: $border-radius; // Safari 3-4, iOS 1-3.2, Android 1.6- */
+  -moz-border-radius: $border-radius; // Firefox 1-3.6 */
+  border-radius: $border-radius; // Opera 10.5, IE 9, Safari 5, Chrome, Firefox 4, iOS 4, Android 2.1+ */
+}
+
+@mixin center-content($max-width) {
+  max-width: $max-width;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@mixin clear-fix(){
+  .group {
+
+    &:before,
+    &:after {
+      content: "";
+      display: table;
+    }
+    &:after { clear: both; }
+  }
+
+  .group { zoom: 1; /* For IE 6/7 (trigger hasLayout) */ }
+}
+
+@mixin horiz-cntr($max-width) {
+  max-width: $max-width;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@mixin line-break() { display: table; }
+
+@mixin p-max-width($max-width) {
+  max-width: $max-width;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@mixin pad-15px() {
+  padding-right: 15px;
+  padding-left: 15px;
+}
